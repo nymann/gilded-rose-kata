@@ -1,5 +1,10 @@
-[5] => sellIn=4, quality=23 
-[4] => sellIn=3, quality=23 
-[3] => sellIn=2, quality=23 
-[2] => sellIn=1, quality=23 
-[1] => sellIn=0, quality=23 
+[5, 10] => Backstage passes to a TAFKAL80ETC concert, 4, 13 
+[5, 48] => Backstage passes to a TAFKAL80ETC concert, 4, 50 
+[4, 10] => Backstage passes to a TAFKAL80ETC concert, 3, 13 
+[4, 48] => Backstage passes to a TAFKAL80ETC concert, 3, 50 
+[3, 10] => Backstage passes to a TAFKAL80ETC concert, 2, 13 
+[3, 48] => Backstage passes to a TAFKAL80ETC concert, 2, 50 
+[2, 10] => Backstage passes to a TAFKAL80ETC concert, 1, 13 
+[2, 48] => Backstage passes to a TAFKAL80ETC concert, 1, 50 
+[1, 10] => Backstage passes to a TAFKAL80ETC concert, 0, 13 
+[1, 48] => Backstage passes to a TAFKAL80ETC concert, 0, 50 
