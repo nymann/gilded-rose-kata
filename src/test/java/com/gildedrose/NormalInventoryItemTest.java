@@ -36,6 +36,16 @@ public class NormalInventoryItemTest {
     }
 
     @Test
+    void onceSellByDateHasPassedQualityDegradesTwiceAsFastButNotBelowZero() {
+        Item item = new Item("::name::", 0, 1);
+        GildedRose gildedRose = new GildedRose(new Item[]{item});
+
+        gildedRose.updateQuality();
+
+        assertEquals(0, item.quality);
+    }
+
+    @Test
     void qualityOfAnItemCanNeverBecomeNegative() {
         Item item = new Item("::name::", 2, 0);
         GildedRose gildedRose = new GildedRose(new Item[]{item});
