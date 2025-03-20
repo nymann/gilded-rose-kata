@@ -11,7 +11,6 @@
 
     <properties>
         <java.version>23</java.version>
-        <junit.jupiter.version>5.12.1</junit.jupiter.version>
         <maven.maven-compiler-plugin.version>3.14.0</maven.maven-compiler-plugin.version>
         <maven.maven-surefire-plugin.version>3.5.2</maven.maven-surefire-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,8 +20,13 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>${junit.jupiter.version}</version>
+            <version>5.12.1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.approvaltests</groupId>
+            <artifactId>approvaltests</artifactId>
+            <version>24.18.0</version>
         </dependency>
     </dependencies>
 

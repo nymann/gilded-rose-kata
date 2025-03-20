@@ -1,0 +1,5 @@
+[5] => sellIn=4, quality=23 
+[4] => sellIn=3, quality=23 
+[3] => sellIn=2, quality=23 
+[2] => sellIn=1, quality=23 
+[1] => sellIn=0, quality=23 
