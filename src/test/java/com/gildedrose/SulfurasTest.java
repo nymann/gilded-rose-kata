@@ -16,12 +16,12 @@ public class SulfurasTest {
     }
 
     @Test
-    void sulfurasNeverExpires() {
-        Item sulfuras = new Item("Sulfuras, Hand of Ragnaros", 50, 80);
+    void sulfurasNeverExpiresSoSellInDateDoesNotChange() {
+        Item sulfuras = new Item("Sulfuras, Hand of Ragnaros", -1, 80);
         GildedRose gildedRose = new GildedRose(new Item[]{sulfuras});
 
         gildedRose.updateQuality();
 
-        assertEquals(50, sulfuras.sellIn);
+        assertEquals(-1, sulfuras.sellIn);
     }
 }
