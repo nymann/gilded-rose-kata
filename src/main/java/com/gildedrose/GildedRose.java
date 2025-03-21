@@ -15,7 +15,10 @@ class GildedRose {
 
     private static ItemUpdater getItemUpdaterFor(Item item) {
         switch (item.name) {
-            case "Aged Brie" -> new AgedBrieUpdater().update(item);
+            case "Aged Brie" -> {
+                AgedBrieUpdater agedBrieUpdater = new AgedBrieUpdater();
+                agedBrieUpdater.update(item);
+            }
             case "Backstage passes to a TAFKAL80ETC concert" ->
                 new BackstagePassesQualityUpdater().update(item);
             case "Sulfuras, Hand of Ragnaros" -> {
