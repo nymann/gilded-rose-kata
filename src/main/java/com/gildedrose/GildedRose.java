@@ -1,7 +1,6 @@
 package com.gildedrose;
 
 class GildedRose {
-    private final UncategorizedItemUpdater uncategorizedItemUpdater = new UncategorizedItemUpdater();
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -17,7 +16,7 @@ class GildedRose {
                 case "Sulfuras, Hand of Ragnaros" -> {
 
                 }
-                default -> uncategorizedItemUpdater.updateQualityForItem(item);
+                default -> new UncategorizedItemUpdater().updateQualityForItem(item);
             }
         }
     }
