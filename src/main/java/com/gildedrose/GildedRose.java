@@ -21,11 +21,6 @@ class GildedRose {
         }
     }
 
-    private void updateQualityForItem(Item item) {
-
-        uncategorizedItemUpdater.updateQualityForItem(item);
-    }
-
     private void updateQualityForAgedBrie(Item item) {
         if (item.quality < 50) {
             item.quality++;
