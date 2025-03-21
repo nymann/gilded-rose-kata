@@ -50,6 +50,7 @@ class GildedRose {
                     break;
 
                 case "Sulfuras, Hand of Ragnaros":
+                    break;
 
                 default:
                     if (item.quality > 0) {
