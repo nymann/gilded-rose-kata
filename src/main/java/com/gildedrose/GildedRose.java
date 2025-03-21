@@ -18,6 +18,7 @@ class GildedRose {
             case "Aged Brie" -> {
                 AgedBrieUpdater agedBrieUpdater = new AgedBrieUpdater();
                 agedBrieUpdater.update(item);
+                return agedBrieUpdater;
             }
             case "Backstage passes to a TAFKAL80ETC concert" ->
                 new BackstagePassesQualityUpdater().update(item);
