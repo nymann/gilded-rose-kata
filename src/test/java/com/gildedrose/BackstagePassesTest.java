@@ -22,9 +22,12 @@ public class BackstagePassesTest {
 
     @Test
     void qualityIncreasesBy1WhenThereAreMoreThan10DaysRemaining() {
-        Integer[] sellIn = {11};
-        Integer[] qualities = {3};
-        CombinationApprovals.verifyAllCombinations(this::updateQuality, sellIn, qualities);
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 11, 10);
+        GildedRose gildedRose = new GildedRose(new Item[]{item});
+
+        gildedRose.updateQuality();
+
+        assertEquals(11, item.quality);
     }
 
     @Test
