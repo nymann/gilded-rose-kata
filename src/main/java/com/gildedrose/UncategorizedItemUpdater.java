@@ -1,8 +1,6 @@
 package com.gildedrose;
 
 public class UncategorizedItemUpdater implements ItemUpdater {
-    public UncategorizedItemUpdater() {
-    }
 
     @Override
     public void update(Item item) {

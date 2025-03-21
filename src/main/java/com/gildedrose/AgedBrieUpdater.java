@@ -1,8 +1,6 @@
 package com.gildedrose;
 
 public class AgedBrieUpdater implements ItemUpdater {
-    public AgedBrieUpdater() {
-    }
 
     public void update(Item item) {
         item.sellIn--;

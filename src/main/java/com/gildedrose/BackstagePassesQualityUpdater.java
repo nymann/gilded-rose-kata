@@ -1,8 +1,6 @@
 package com.gildedrose;
 
 public class BackstagePassesQualityUpdater implements ItemUpdater {
-    public BackstagePassesQualityUpdater() {
-    }
 
     public void update(Item item) {
         item.sellIn--;
