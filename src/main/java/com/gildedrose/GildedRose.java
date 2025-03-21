@@ -31,6 +31,7 @@ class GildedRose {
             default -> {
                 UncategorizedItemUpdater uncategorizedItemUpdater = new UncategorizedItemUpdater();
                 uncategorizedItemUpdater.update(item);
+                return uncategorizedItemUpdater;
             }
         }
         return null;
