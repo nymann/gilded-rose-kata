@@ -20,8 +20,10 @@ class GildedRose {
                 agedBrieUpdater.update(item);
                 return agedBrieUpdater;
             }
-            case "Backstage passes to a TAFKAL80ETC concert" ->
-                new BackstagePassesQualityUpdater().update(item);
+            case "Backstage passes to a TAFKAL80ETC concert" -> {
+                BackstagePassesQualityUpdater backstagePassesQualityUpdater = new BackstagePassesQualityUpdater();
+                backstagePassesQualityUpdater.update(item);
+            }
             case "Sulfuras, Hand of Ragnaros" -> {
 
             }
