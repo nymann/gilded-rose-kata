@@ -1,6 +1,7 @@
 package com.gildedrose;
 
 class GildedRose {
+    private final UncategorizedItemUpdater uncategorizedItemUpdater = new UncategorizedItemUpdater();
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -15,21 +16,14 @@ class GildedRose {
                 case "Sulfuras, Hand of Ragnaros" -> {
 
                 }
-                default -> updateQualityForItem(item);
+                default -> uncategorizedItemUpdater.updateQualityForItem(item);
             }
         }
     }
 
     private void updateQualityForItem(Item item) {
-        if (item.quality > 0) {
-            item.quality--;
-        }
 
-        item.sellIn--;
-
-        if (item.sellIn < 0 && item.quality > 0) {
-            item.quality--;
-        }
+        uncategorizedItemUpdater.updateQualityForItem(item);
     }
 
     private void updateQualityForAgedBrie(Item item) {
