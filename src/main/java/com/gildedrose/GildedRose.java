@@ -22,11 +22,6 @@ class GildedRose {
         }
     }
 
-    private void updateQualityForAgedBrie(Item item) {
-
-        agedBrieUpdater.updateQualityForAgedBrie(item);
-    }
-
     private void updateQualityForBackstagePasses(Item item) {
         if (item.quality < 50) {
             item.quality++;
