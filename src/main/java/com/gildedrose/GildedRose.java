@@ -3,6 +3,7 @@ package com.gildedrose;
 class GildedRose {
     private final UncategorizedItemUpdater uncategorizedItemUpdater = new UncategorizedItemUpdater();
     private final AgedBrieUpdater agedBrieUpdater = new AgedBrieUpdater();
+    private final BackstagePassesQualityUpdater backstagePassesQualityUpdater = new BackstagePassesQualityUpdater();
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -13,7 +14,8 @@ class GildedRose {
         for (Item item : items) {
             switch (item.name) {
                 case "Aged Brie" -> agedBrieUpdater.updateQualityForAgedBrie(item);
-                case "Backstage passes to a TAFKAL80ETC concert" -> updateQualityForBackstagePasses(item);
+                case "Backstage passes to a TAFKAL80ETC concert" ->
+                    backstagePassesQualityUpdater.updateQualityForBackstagePasses(item);
                 case "Sulfuras, Hand of Ragnaros" -> {
 
                 }
@@ -23,23 +25,8 @@ class GildedRose {
     }
 
     private void updateQualityForBackstagePasses(Item item) {
-        if (item.quality < 50) {
-            item.quality++;
 
-            if (item.sellIn < 11 && item.quality < 50) {
-                item.quality++;
-            }
-
-            if (item.sellIn < 6 && item.quality < 50) {
-                item.quality++;
-            }
-        }
-
-        item.sellIn--;
-
-        if (item.sellIn < 0) {
-            item.quality = 0;
-        }
+        backstagePassesQualityUpdater.updateQualityForBackstagePasses(item);
     }
 
 }
