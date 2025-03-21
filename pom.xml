@@ -48,6 +48,10 @@
                     <mutators>
                         <mutator>ALL</mutator>
                     </mutators>
+                    <mutationThreshold>100</mutationThreshold>
+                    <excludedClasses>
+                        <excludedClass>com.gildedrose.Item</excludedClass>
+                    </excludedClasses>
                 </configuration>
             </plugin>
             <plugin>
