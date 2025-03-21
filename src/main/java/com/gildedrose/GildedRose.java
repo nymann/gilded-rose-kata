@@ -24,9 +24,4 @@ class GildedRose {
         }
     }
 
-    private void updateQualityForBackstagePasses(Item item) {
-
-        backstagePassesQualityUpdater.updateQualityForBackstagePasses(item);
-    }
-
 }
