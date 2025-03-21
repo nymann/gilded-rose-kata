@@ -1,6 +1,7 @@
 package com.gildedrose;
 
 class GildedRose {
+    private final DecrementingSellInStrategy decrementingSellInStrategy = new DecrementingSellInStrategy();
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -11,12 +12,12 @@ class GildedRose {
         for (Item item : items) {
             switch (item.name) {
                 case "Aged Brie":
-                    decrementSellIn(item);
+                    decrementingSellInStrategy.decrementSellIn(item);
                     updateAgedBrieQuality(item);
                     break;
 
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    decrementSellIn(item);
+                    decrementingSellInStrategy.decrementSellIn(item);
                     updateBackstagePassesQuality(item);
                     break;
 
@@ -24,15 +25,11 @@ class GildedRose {
                     break;
 
                 default:
-                    decrementSellIn(item);
+                    decrementingSellInStrategy.decrementSellIn(item);
                     updateNormalItemQuality(item);
             }
 
         }
-    }
-
-    private static void decrementSellIn(Item item) {
-        item.sellIn = item.sellIn - 1;
     }
 
     private static void updateNormalItemQuality(Item item) {
