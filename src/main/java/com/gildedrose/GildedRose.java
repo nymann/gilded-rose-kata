@@ -17,7 +17,7 @@ class GildedRose {
 
                 case "Backstage passes to a TAFKAL80ETC concert":
                     item.sellIn = item.sellIn - 1;
-                    updateBackstagePasses(item);
+                    updateBackstagePassesQuality(item);
                     break;
 
                 case "Sulfuras, Hand of Ragnaros":
@@ -44,7 +44,7 @@ class GildedRose {
         }
     }
 
-    private static void updateBackstagePasses(Item item) {
+    private static void updateBackstagePassesQuality(Item item) {
         if (item.quality < 50) {
             item.quality = item.quality + 1;
 
