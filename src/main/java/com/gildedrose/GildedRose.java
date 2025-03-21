@@ -10,6 +10,17 @@ class GildedRose {
     public void updateQuality() {
         for (Item item : items) {
             switch (item.name) {
+                case "Aged Brie":
+                    updateQualityFor(item);
+                    break;
+
+                case "Backstage passes to a TAFKAL80ETC concert":
+                    updateQualityFor(item);
+                    break;
+
+                case "Sulfuras, Hand of Ragnaros":
+                    updateQualityFor(item);
+
                 default:
                     updateQualityFor(item);
             }
