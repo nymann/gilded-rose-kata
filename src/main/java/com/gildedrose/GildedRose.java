@@ -48,8 +48,6 @@ class GildedRose {
                     }
                 }
                 case "Sulfuras, Hand of Ragnaros" -> {
-                    if (item.quality > 0) {
-                    }
 
                     if (item.sellIn < 0) {
                         if (!item.name.equals("Aged Brie")) {
