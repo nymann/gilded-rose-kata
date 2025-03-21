@@ -26,7 +26,7 @@ class GildedRose {
                 return backstagePassesQualityUpdater;
             }
             case "Sulfuras, Hand of Ragnaros" -> {
-
+                return null;
             }
             default -> {
                 UncategorizedItemUpdater uncategorizedItemUpdater = new UncategorizedItemUpdater();
@@ -34,7 +34,6 @@ class GildedRose {
                 return uncategorizedItemUpdater;
             }
         }
-        return null;
     }
 
 }
