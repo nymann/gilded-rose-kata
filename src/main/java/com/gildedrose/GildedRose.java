@@ -28,7 +28,10 @@ class GildedRose {
             case "Sulfuras, Hand of Ragnaros" -> {
 
             }
-            default -> new UncategorizedItemUpdater().update(item);
+            default -> {
+                UncategorizedItemUpdater uncategorizedItemUpdater = new UncategorizedItemUpdater();
+                uncategorizedItemUpdater.update(item);
+            }
         }
         return null;
     }
