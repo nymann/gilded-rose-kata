@@ -9,7 +9,9 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            updateQualityFor(item);
+            switch (item.name) {
+                default -> updateQualityFor(item);
+            }
         }
     }
 
