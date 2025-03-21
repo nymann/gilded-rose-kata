@@ -1,14 +1,14 @@
 package com.gildedrose;
 
-import org.approvaltests.combinations.CombinationApprovals;
-import org.approvaltests.reporters.ClipboardReporter;
-import org.approvaltests.reporters.DiffReporter;
-import org.approvaltests.reporters.UseReporter;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@UseReporter({ClipboardReporter.class})
 public class BackstagePassesTest {
 
     @Test
@@ -17,6 +17,7 @@ public class BackstagePassesTest {
         GildedRose gildedRose = new GildedRose(new Item[]{item});
 
         gildedRose.updateQuality();
+
         assertEquals(0, item.quality);
     }
 
@@ -30,26 +31,36 @@ public class BackstagePassesTest {
         assertEquals(11, item.quality);
     }
 
-    @Test
-    void qualityIncreasesBy2WhenThereAreMoreThan5ButLessThan10DaysRemaining() {
-        Integer[] sellIns = {10, 9, 8, 7, 6};
-        Integer[] qualities = {3, 48, 49};
-        CombinationApprovals.verifyAllCombinations(this::updateQuality, sellIns, qualities);
-    }
-
-    @Test
-    void qualityIncreasesBy3WhenThereAre5orLessDaysRemaining() {
-        Integer[] sellIns = {5, 4, 3, 2, 1};
-        Integer[] qualities = {10, 48};
-        CombinationApprovals.verifyAllCombinations(this::updateQuality, sellIns, qualities);
-    }
-
-    private String updateQuality(int sellIn, int initialQuality) {
-        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, initialQuality);
+    @ParameterizedTest
+    @ValueSource(ints = {10, 9, 8, 7, 6})
+    void qualityIncreasesBy2WhenThereAreMoreThan5But10orLessDaysRemaining(int sellIn) {
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 3);
         GildedRose gildedRose = new GildedRose(new Item[]{item});
 
         gildedRose.updateQuality();
 
-        return item.toString();
+        assertEquals(5, item.quality);
     }
+
+    @ValueSource(ints = {5, 4, 3, 2, 1})
+    @ParameterizedTest
+    void qualityIncreasesBy3WhenThereAre5orLessDaysRemaining(int sellIn) {
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 2);
+        GildedRose gildedRose = new GildedRose(new Item[]{item});
+
+        gildedRose.updateQuality();
+
+        assertEquals(5, item.quality);
+    }
+    @ValueSource(ints = {48, 49})
+    @ParameterizedTest
+    void qualityCanNeverBeMoreThan50(int quality) {
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 5, quality);
+        GildedRose gildedRose = new GildedRose(new Item[]{item});
+
+        gildedRose.updateQuality();
+
+        assertEquals(50, item.quality);
+    }
+
 }
