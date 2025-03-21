@@ -11,17 +11,9 @@ class GildedRose {
         for (Item item : items) {
             switch (item.name) {
                 case "Aged Brie" -> {
-                    if (!item.name.equals("Aged Brie") && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                        if (item.quality > 0) {
-                            if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                                item.quality = item.quality - 1;
-                            }
-                        }
-                    } else {
-                        if (item.quality < 50) {
-                            item.quality = item.quality + 1;
+                    if (item.quality < 50) {
+                        item.quality = item.quality + 1;
 
-                        }
                     }
 
                     item.sellIn = item.sellIn - 1;
