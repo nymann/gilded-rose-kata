@@ -4,7 +4,7 @@ public class BackstagePassesQualityUpdater {
     public BackstagePassesQualityUpdater() {
     }
 
-    public void updateQualityForBackstagePasses(Item item) {
+    public void update(Item item) {
         if (item.quality < 50) {
             item.quality++;
 

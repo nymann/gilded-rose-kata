@@ -12,7 +12,7 @@ class GildedRose {
             switch (item.name) {
                 case "Aged Brie" -> new AgedBrieUpdater().update(item);
                 case "Backstage passes to a TAFKAL80ETC concert" ->
-                    new BackstagePassesQualityUpdater().updateQualityForBackstagePasses(item);
+                    new BackstagePassesQualityUpdater().update(item);
                 case "Sulfuras, Hand of Ragnaros" -> {
 
                 }
