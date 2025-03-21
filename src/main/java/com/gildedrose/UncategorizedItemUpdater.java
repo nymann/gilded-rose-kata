@@ -1,9 +1,10 @@
 package com.gildedrose;
 
-public class UncategorizedItemUpdater {
+public class UncategorizedItemUpdater implements ItemUpdater {
     public UncategorizedItemUpdater() {
     }
 
+    @Override
     public void update(Item item) {
         if (item.quality > 0) {
             item.quality--;

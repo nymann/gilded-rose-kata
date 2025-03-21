@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class AgedBrieUpdater {
+public class AgedBrieUpdater implements ItemUpdater {
     public AgedBrieUpdater() {
     }
 
