@@ -11,9 +11,7 @@ class GildedRose {
         for (Item item : items) {
             switch (item.name) {
                 case "Aged Brie" -> updateQualityForAgedBrie(item);
-                case "Backstage passes to a TAFKAL80ETC concert" -> {
-                    updateQualityForBackstagePasses(item);
-                }
+                case "Backstage passes to a TAFKAL80ETC concert" -> updateQualityForBackstagePasses(item);
                 case "Sulfuras, Hand of Ragnaros" -> {
 
                 }
