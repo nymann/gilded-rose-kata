@@ -13,7 +13,7 @@ class GildedRose {
         }
     }
 
-    private static void getItemUpdaterFor(Item item) {
+    private static ItemUpdater getItemUpdaterFor(Item item) {
         switch (item.name) {
             case "Aged Brie" -> new AgedBrieUpdater().update(item);
             case "Backstage passes to a TAFKAL80ETC concert" ->
@@ -23,6 +23,7 @@ class GildedRose {
             }
             default -> new UncategorizedItemUpdater().update(item);
         }
+        return null;
     }
 
 }
