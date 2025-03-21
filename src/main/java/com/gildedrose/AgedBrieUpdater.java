@@ -4,7 +4,7 @@ public class AgedBrieUpdater {
     public AgedBrieUpdater() {
     }
 
-    public void updateQualityForAgedBrie(Item item) {
+    public void update(Item item) {
         if (item.quality < 50) {
             item.quality++;
         }
