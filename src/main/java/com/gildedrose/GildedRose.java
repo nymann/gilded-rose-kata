@@ -15,19 +15,21 @@ class GildedRose {
                 case "Sulfuras, Hand of Ragnaros" -> {
 
                 }
-                default -> {
-                    if (item.quality > 0) {
-                        item.quality = item.quality - 1;
-                    }
+                default -> updateQualityForItem(item);
+            }
+        }
+    }
 
-                    item.sellIn = item.sellIn - 1;
+    private static void updateQualityForItem(Item item) {
+        if (item.quality > 0) {
+            item.quality = item.quality - 1;
+        }
 
-                    if (item.sellIn < 0) {
-                        if (item.quality > 0) {
-                            item.quality = item.quality - 1;
-                        }
-                    }
-                }
+        item.sellIn = item.sellIn - 1;
+
+        if (item.sellIn < 0) {
+            if (item.quality > 0) {
+                item.quality = item.quality - 1;
             }
         }
     }
