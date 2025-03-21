@@ -23,6 +23,7 @@ class GildedRose {
             case "Backstage passes to a TAFKAL80ETC concert" -> {
                 BackstagePassesQualityUpdater backstagePassesQualityUpdater = new BackstagePassesQualityUpdater();
                 backstagePassesQualityUpdater.update(item);
+                return backstagePassesQualityUpdater;
             }
             case "Sulfuras, Hand of Ragnaros" -> {
 
