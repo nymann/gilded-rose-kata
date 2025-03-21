@@ -12,7 +12,7 @@ class GildedRose {
             switch (item.name) {
                 case "Aged Brie":
                     item.sellIn = item.sellIn - 1;
-                    updateAgedBrie(item);
+                    updateAgedBrieQuality(item);
                     break;
 
                 case "Backstage passes to a TAFKAL80ETC concert":
@@ -67,7 +67,7 @@ class GildedRose {
         }
     }
 
-    private static void updateAgedBrie(Item item) {
+    private static void updateAgedBrieQuality(Item item) {
         if (item.quality < 50) {
             item.quality = item.quality + 1;
         }
