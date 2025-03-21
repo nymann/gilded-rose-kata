@@ -4,7 +4,7 @@ public class UncategorizedItemUpdater {
     public UncategorizedItemUpdater() {
     }
 
-    public void updateQualityForItem(Item item) {
+    public void update(Item item) {
         if (item.quality > 0) {
             item.quality--;
         }
