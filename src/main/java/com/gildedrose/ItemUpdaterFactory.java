@@ -1,7 +1,7 @@
 package com.gildedrose;
 
 public class ItemUpdaterFactory {
-    static ItemUpdater itemUpdaterFactory(Item item) {
+    static ItemUpdater create(Item item) {
         switch (item.name) {
             case "Aged Brie" -> {
                 return new AgedBrieUpdater();
