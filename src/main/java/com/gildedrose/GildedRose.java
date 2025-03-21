@@ -9,12 +9,12 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            ItemUpdater itemUpdater = getItemUpdaterFor(item);
+            ItemUpdater itemUpdater = itemUpdaterFactory(item);
             itemUpdater.update(item);
         }
     }
 
-    private static ItemUpdater getItemUpdaterFor(Item item) {
+    private static ItemUpdater itemUpdaterFactory(Item item) {
         switch (item.name) {
             case "Aged Brie" -> {
                 return new AgedBrieUpdater();
