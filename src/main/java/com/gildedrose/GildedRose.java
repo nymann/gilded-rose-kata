@@ -10,6 +10,7 @@ class GildedRose {
     public void updateQuality() {
         for (Item item : items) {
             ItemUpdater itemUpdater = getItemUpdaterFor(item);
+            itemUpdater.update(item);
         }
     }
 
@@ -17,12 +18,10 @@ class GildedRose {
         switch (item.name) {
             case "Aged Brie" -> {
                 AgedBrieUpdater agedBrieUpdater = new AgedBrieUpdater();
-                agedBrieUpdater.update(item);
                 return agedBrieUpdater;
             }
             case "Backstage passes to a TAFKAL80ETC concert" -> {
                 BackstagePassesQualityUpdater backstagePassesQualityUpdater = new BackstagePassesQualityUpdater();
-                backstagePassesQualityUpdater.update(item);
                 return backstagePassesQualityUpdater;
             }
             case "Sulfuras, Hand of Ragnaros" -> {
@@ -30,7 +29,6 @@ class GildedRose {
             }
             default -> {
                 UncategorizedItemUpdater uncategorizedItemUpdater = new UncategorizedItemUpdater();
-                uncategorizedItemUpdater.update(item);
                 return uncategorizedItemUpdater;
             }
         }
