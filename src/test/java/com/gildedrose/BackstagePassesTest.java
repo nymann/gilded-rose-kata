@@ -8,9 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BackstagePassesTest {
 
-    @Test
-    void qualityDropsToZeroAfterTheConcert() {
-        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 10);
+    @ParameterizedTest
+    @ValueSource(ints = {0, -2})
+    void qualityDropsToZeroAfterTheConcert(int sellIn) {
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, 10);
         GildedRose gildedRose = new GildedRose(new Item[]{item});
 
         gildedRose.updateQuality();
