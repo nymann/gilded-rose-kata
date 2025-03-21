@@ -17,19 +17,16 @@ class GildedRose {
     private static ItemUpdater getItemUpdaterFor(Item item) {
         switch (item.name) {
             case "Aged Brie" -> {
-                AgedBrieUpdater agedBrieUpdater = new AgedBrieUpdater();
-                return agedBrieUpdater;
+                return new AgedBrieUpdater();
             }
             case "Backstage passes to a TAFKAL80ETC concert" -> {
-                BackstagePassesQualityUpdater backstagePassesQualityUpdater = new BackstagePassesQualityUpdater();
-                return backstagePassesQualityUpdater;
+                return new BackstagePassesQualityUpdater();
             }
             case "Sulfuras, Hand of Ragnaros" -> {
                 return new SulurasQualityUpdater();
             }
             default -> {
-                UncategorizedItemUpdater uncategorizedItemUpdater = new UncategorizedItemUpdater();
-                return uncategorizedItemUpdater;
+                return new UncategorizedItemUpdater();
             }
         }
     }
