@@ -2,6 +2,7 @@ package com.gildedrose;
 
 class GildedRose {
     private final DecrementingSellInStrategy decrementingSellInStrategy = new DecrementingSellInStrategy();
+    private final NormalItemQualityUpdater normalItemQualityUpdater = new NormalItemQualityUpdater();
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -26,22 +27,9 @@ class GildedRose {
 
                 default:
                     decrementingSellInStrategy.decrementSellIn(item);
-                    updateNormalItemQuality(item);
+                    normalItemQualityUpdater.updateNormalItemQuality(item);
             }
 
-        }
-    }
-
-    private static void updateNormalItemQuality(Item item) {
-        if (item.quality > 0) {
-            item.quality = item.quality - 1;
-        }
-
-
-        if (item.sellIn < 0) {
-            if (item.quality > 0) {
-                item.quality = item.quality - 1;
-            }
         }
     }
 
