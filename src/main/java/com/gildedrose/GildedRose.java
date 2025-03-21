@@ -20,7 +20,7 @@ class GildedRose {
         }
     }
 
-    private static void updateQualityForItem(Item item) {
+    private void updateQualityForItem(Item item) {
         if (item.quality > 0) {
             item.quality--;
         }
@@ -32,7 +32,7 @@ class GildedRose {
         }
     }
 
-    private static void updateQualityForAgedBrie(Item item) {
+    private void updateQualityForAgedBrie(Item item) {
         if (item.quality < 50) {
             item.quality++;
         }
@@ -44,7 +44,7 @@ class GildedRose {
         }
     }
 
-    private static void updateQualityForBackstagePasses(Item item) {
+    private void updateQualityForBackstagePasses(Item item) {
         if (item.quality < 50) {
             item.quality++;
 
