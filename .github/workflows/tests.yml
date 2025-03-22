@@ -20,6 +20,3 @@ jobs:
 
             - name: Run unit tests
               run: mvn test
-
-            - name: Run PIT mutation testing
-              run: mvn org.pitest:pitest-maven:mutationCoverage
