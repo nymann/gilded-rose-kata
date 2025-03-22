@@ -11,10 +11,4 @@ public class ItemUpdaterFactory {
         };
     }
 
-    private static class DoNothingQualityStrategy implements UpdateQualityStrategy {
-        @Override
-        public void updateQuality(Item item1) {
-
-        }
-    }
 }
