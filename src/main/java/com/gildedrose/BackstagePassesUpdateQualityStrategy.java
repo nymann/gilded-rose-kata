@@ -15,7 +15,6 @@ public class BackstagePassesUpdateQualityStrategy implements UpdateQualityStrate
             }
         }
 
-
         if (item.sellIn < 0) {
             item.quality = 0;
         }
