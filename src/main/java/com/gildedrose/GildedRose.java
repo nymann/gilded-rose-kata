@@ -12,7 +12,7 @@ class GildedRose {
             switch (item.name) {
                 case "Aged Brie":
                     new DecrementingSellInStrategy().decrementSellIn(item);
-                    AgedBrieQualityUpdatingStrategy.updateAgedBrieQuality(item);
+                    AgedBrieQualityUpdatingStrategy.updateQuality(item);
                     break;
 
                 case "Backstage passes to a TAFKAL80ETC concert":
