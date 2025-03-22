@@ -17,7 +17,7 @@ class GildedRose {
 
                 case "Backstage passes to a TAFKAL80ETC concert":
                     new DecrementingSellInStrategy().decrementSellIn(item);
-                    BackstagePassesQualityUpdatingStrategy.updateBackstagePassesQuality(item);
+                    BackstagePassesQualityUpdatingStrategy.updateQuality(item);
                     break;
 
                 case "Sulfuras, Hand of Ragnaros":
