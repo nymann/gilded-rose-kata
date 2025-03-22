@@ -4,7 +4,7 @@ public class NormalItemQualityUpdatingStrategy {
     public NormalItemQualityUpdatingStrategy() {
     }
 
-    public void updateNormalItemQuality(Item item) {
+    public void updateQuality(Item item) {
         if (item.quality > 0) {
             item.quality = item.quality - 1;
         }
