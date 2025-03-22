@@ -10,16 +10,13 @@ class GildedRose {
     public void updateQuality() {
         for (Item item : items) {
             ItemUpdater itemUpdater;
-            UpdateSellInStrategy decrementingSellInStrategy = new DecrementingSellInStrategy();
             switch (item.name) {
                 case "Aged Brie":
-                    UpdateQualityStrategy agedBrieUpdateQualityStrategy = new AgedBrieUpdateQualityStrategy();
-                    itemUpdater = new ItemUpdater(agedBrieUpdateQualityStrategy, decrementingSellInStrategy);
+                    itemUpdater = new ItemUpdater(new AgedBrieUpdateQualityStrategy(), new DecrementingSellInStrategy());
                     break;
 
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    BackstagePassesUpdateQualityStrategy backstagePassesUpdateQualityStrategy = new BackstagePassesUpdateQualityStrategy();
-                    itemUpdater = new ItemUpdater(backstagePassesUpdateQualityStrategy, decrementingSellInStrategy);
+                    itemUpdater = new ItemUpdater(new BackstagePassesUpdateQualityStrategy(), new DecrementingSellInStrategy());
                     break;
 
                 case "Sulfuras, Hand of Ragnaros":
@@ -32,8 +29,7 @@ class GildedRose {
                     break;
 
                 default:
-                    NormalItemUpdateQualityStrategy normalItemUpdateQualityStrategy = new NormalItemUpdateQualityStrategy();
-                    itemUpdater = new ItemUpdater(normalItemUpdateQualityStrategy, decrementingSellInStrategy);
+                    itemUpdater = new ItemUpdater(new NormalItemUpdateQualityStrategy(), new DecrementingSellInStrategy());
             }
 
             itemUpdater.updateItem(item);
