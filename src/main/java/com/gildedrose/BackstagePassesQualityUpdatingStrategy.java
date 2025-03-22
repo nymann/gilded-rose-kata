@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class BackstagePassesUpdatingStrategy {
+public class BackstagePassesQualityUpdatingStrategy {
     static void updateBackstagePassesQuality(Item item) {
         if (item.quality < 50) {
             item.quality = item.quality + 1;
