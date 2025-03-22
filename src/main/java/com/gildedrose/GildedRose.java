@@ -13,16 +13,12 @@ class GildedRose {
             UpdateSellInStrategy decrementingSellInStrategy = new DecrementingSellInStrategy();
             switch (item.name) {
                 case "Aged Brie":
-                    decrementingSellInStrategy.updateSellIn(item);
                     UpdateQualityStrategy agedBrieUpdateQualityStrategy = new AgedBrieUpdateQualityStrategy();
-                    agedBrieUpdateQualityStrategy.updateQuality(item);
                     itemUpdater = new ItemUpdater(agedBrieUpdateQualityStrategy, decrementingSellInStrategy);
                     break;
 
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    decrementingSellInStrategy.updateSellIn(item);
                     BackstagePassesUpdateQualityStrategy backstagePassesUpdateQualityStrategy = new BackstagePassesUpdateQualityStrategy();
-                    backstagePassesUpdateQualityStrategy.updateQuality(item);
                     itemUpdater = new ItemUpdater(backstagePassesUpdateQualityStrategy, decrementingSellInStrategy);
                     break;
 
@@ -36,11 +32,11 @@ class GildedRose {
                     break;
 
                 default:
-                    new DecrementingSellInStrategy().updateSellIn(item);
                     NormalItemUpdateQualityStrategy normalItemUpdateQualityStrategy = new NormalItemUpdateQualityStrategy();
-                    normalItemUpdateQualityStrategy.updateQuality(item);
                     itemUpdater = new ItemUpdater(normalItemUpdateQualityStrategy, decrementingSellInStrategy);
             }
+
+            itemUpdater.updateItem(item);
 
 
         }
