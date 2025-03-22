@@ -1,9 +1,10 @@
 package com.gildedrose;
 
-public class DecrementingSellInStrategy {
+public class DecrementingSellInStrategy implements UpdateSellInStrategy {
     public DecrementingSellInStrategy() {
     }
 
+    @Override
     public void updateSellIn(Item item) {
         item.sellIn = item.sellIn - 1;
     }
