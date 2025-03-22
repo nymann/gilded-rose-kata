@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class AgedBrieQualityUpdatingStrategy implements QualityUpdatingStrategy {
+public class AgedBrieUpdateQualityStrategy implements UpdateQualityStrategy {
 
     @Override
     public void updateQuality(Item item) {

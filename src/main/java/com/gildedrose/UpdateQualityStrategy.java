@@ -1,5 +1,5 @@
 package com.gildedrose;
 
-public interface QualityUpdatingStrategy {
+public interface UpdateQualityStrategy {
     void updateQuality(Item item);
 }

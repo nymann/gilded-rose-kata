@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class BackstagePassesQualityUpdatingStrategy implements QualityUpdatingStrategy {
+public class BackstagePassesUpdateQualityStrategy implements UpdateQualityStrategy {
     @Override
     public void updateQuality(Item item) {
         if (item.quality < 50) {

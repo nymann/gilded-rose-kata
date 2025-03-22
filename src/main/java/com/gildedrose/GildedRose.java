@@ -12,12 +12,12 @@ class GildedRose {
             switch (item.name) {
                 case "Aged Brie":
                     new DecrementingSellInStrategy().updateSellIn(item);
-                    new AgedBrieQualityUpdatingStrategy().updateQuality(item);
+                    new AgedBrieUpdateQualityStrategy().updateQuality(item);
                     break;
 
                 case "Backstage passes to a TAFKAL80ETC concert":
                     new DecrementingSellInStrategy().updateSellIn(item);
-                    new BackstagePassesQualityUpdatingStrategy().updateQuality(item);
+                    new BackstagePassesUpdateQualityStrategy().updateQuality(item);
                     break;
 
                 case "Sulfuras, Hand of Ragnaros":
@@ -25,7 +25,7 @@ class GildedRose {
 
                 default:
                     new DecrementingSellInStrategy().updateSellIn(item);
-                    new NormalItemQualityUpdatingStrategy().updateQuality(item);
+                    new NormalItemUpdateQualityStrategy().updateQuality(item);
             }
 
         }
