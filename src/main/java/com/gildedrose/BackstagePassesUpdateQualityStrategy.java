@@ -4,17 +4,17 @@ public class BackstagePassesUpdateQualityStrategy implements UpdateQualityStrate
     @Override
     public void updateQuality(Item item) {
         if (item.quality < 50) {
-            item.quality = item.quality + 1;
+            item.quality++;
 
             if (item.sellIn < 10) {
                 if (item.quality < 50) {
-                    item.quality = item.quality + 1;
+                    item.quality++;
                 }
             }
 
             if (item.sellIn < 5) {
                 if (item.quality < 50) {
-                    item.quality = item.quality + 1;
+                    item.quality++;
                 }
             }
         }

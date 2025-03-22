@@ -6,6 +6,6 @@ public class DecrementingSellInStrategy implements UpdateSellInStrategy {
 
     @Override
     public void updateSellIn(Item item) {
-        item.sellIn = item.sellIn - 1;
+        item.sellIn--;
     }
 }
