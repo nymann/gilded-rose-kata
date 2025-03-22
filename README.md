@@ -1,4 +1,12 @@
-# Gilded Rose Requirements Specification
+# Experiment: Gilded Rose using Strategy Pattern
+
+Instead of going in my usual direction with this Kata, I wanted to see what a strategy pattern solution could look like.
+
+While I feel like updating the quality of the item and updating the sell in is two separate things, I don't feel it's a
+strong enough smell to warrant the strategy pattern approach.
+
+
+## Gilded Rose Requirements Specification
 
 Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a
 prominent city ran by a friendly innkeeper named Allison. We also buy and sell only the finest goods.
