@@ -6,16 +6,12 @@ public class BackstagePassesUpdateQualityStrategy implements UpdateQualityStrate
         if (item.quality < 50) {
             item.quality++;
 
-            if (item.sellIn < 10) {
-                if (item.quality < 50) {
-                    item.quality++;
-                }
+            if (item.sellIn < 10 && item.quality < 50) {
+                item.quality++;
             }
 
-            if (item.sellIn < 5) {
-                if (item.quality < 50) {
-                    item.quality++;
-                }
+            if (item.sellIn < 5 && item.quality < 50) {
+                item.quality++;
             }
         }
 
