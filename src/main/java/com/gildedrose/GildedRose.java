@@ -25,7 +25,7 @@ class GildedRose {
 
                 default:
                     new DecrementingSellInStrategy().decrementSellIn(item);
-                    new NormalItemQualityUpdater().updateNormalItemQuality(item);
+                    new NormalItemQualityUpdatingStrategy().updateNormalItemQuality(item);
             }
 
         }

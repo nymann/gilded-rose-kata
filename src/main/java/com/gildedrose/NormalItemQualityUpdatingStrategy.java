@@ -1,7 +1,7 @@
 package com.gildedrose;
 
-public class NormalItemQualityUpdater {
-    public NormalItemQualityUpdater() {
+public class NormalItemQualityUpdatingStrategy {
+    public NormalItemQualityUpdatingStrategy() {
     }
 
     public void updateNormalItemQuality(Item item) {
