@@ -11,12 +11,12 @@ class GildedRose {
         for (Item item : items) {
             switch (item.name) {
                 case "Aged Brie":
-                    new DecrementingSellInStrategy().decrementSellIn(item);
+                    new DecrementingSellInStrategy().updateSellIn(item);
                     new AgedBrieQualityUpdatingStrategy().updateQuality(item);
                     break;
 
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    new DecrementingSellInStrategy().decrementSellIn(item);
+                    new DecrementingSellInStrategy().updateSellIn(item);
                     new BackstagePassesQualityUpdatingStrategy().updateQuality(item);
                     break;
 
@@ -24,7 +24,7 @@ class GildedRose {
                     break;
 
                 default:
-                    new DecrementingSellInStrategy().decrementSellIn(item);
+                    new DecrementingSellInStrategy().updateSellIn(item);
                     new NormalItemQualityUpdatingStrategy().updateQuality(item);
             }
 
